@@ -6,12 +6,14 @@ This is the default template for OpenAgent configuration libraries. Fork this re
 
 ```
 library/
-├── skill/           # Reusable skills (SKILL.md + reference files)
-├── command/         # Slash commands (markdown with YAML frontmatter)
-├── tool/            # Custom TypeScript tools (@opencode-ai/plugin)
-├── rule/            # Reusable instruction sets
-├── agent/           # Custom agent configurations
-└── mcp.json         # MCP server configurations
+├── skill/              # Reusable skills (SKILL.md + reference files)
+├── command/            # Slash commands (markdown with YAML frontmatter)
+├── tool/               # Custom TypeScript tools (@opencode-ai/plugin)
+├── rule/               # Reusable instruction sets
+├── agent/              # Custom agent configurations
+├── mcp/                # MCP server configurations (servers.json)
+├── opencode/           # OpenCode plugin configs (oh-my-opencode.json)
+└── workspace-template/ # Workspace templates (distro/skills/env/init script)
 ```
 
 ## Built-in Library Tools

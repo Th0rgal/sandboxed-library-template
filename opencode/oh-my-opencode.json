@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
+  "agents": {
+    "Sisyphus": {
+      "model": "anthropic/claude-sonnet-4-20250514"
+    },
+    "explore": {
+      "model": "anthropic/claude-haiku-4-20250514"
+    }
+  }
+}

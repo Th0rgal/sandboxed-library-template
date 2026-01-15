@@ -1,0 +1,8 @@
+{
+  "example-remote-mcp": {
+    "type": "remote",
+    "url": "https://example.com/mcp",
+    "headers": {},
+    "enabled": false
+  }
+}
