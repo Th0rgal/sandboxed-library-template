@@ -4,8 +4,6 @@
   "distro": "ubuntu-noble",
   "skills": [
     "bitwarden-secrets",
-    "github-cli",
-    "library-management",
     "agent-browser"
   ],
   "env_vars": {

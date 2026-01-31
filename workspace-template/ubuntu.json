@@ -3,9 +3,7 @@
   "description": "Ubuntu workspace with SSH/GPG/BWS and bun/MCP bootstrap (no Tailscale).",
   "distro": "ubuntu-noble",
   "skills": [
-    "bitwarden-secrets",
-    "github-cli",
-    "library-management"
+    "bitwarden-secrets"
   ],
   "env_vars": {},
   "encrypted_keys": [],
