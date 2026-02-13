@@ -108,4 +108,4 @@ Pass a starting image along with the prompt to create video from a still image.
 
 ## Security
 - Never store API keys in code
-- Use `${GOOGLE_GENAI_API_KEY}` placeholder (substituted during skill sync)
+- Use `<encrypted>YOUR_GOOGLE_GENAI_API_KEY</encrypted>` placeholder (substituted during skill sync)

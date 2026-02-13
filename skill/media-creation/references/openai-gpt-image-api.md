@@ -11,7 +11,7 @@ Sources: OpenAI API reference for Images and GPT Image 1.5 (Jan 1, 2026). Creden
 
 ## Auth and Base URL
 - Base URL: `https://api.openai.com/v1`
-- Header: `Authorization: Bearer ${OPENAI_API_KEY}` (placeholder; replaced at deploy time)
+- Header: `Authorization: Bearer <encrypted>YOUR_OPENAI_API_KEY</encrypted>` (encrypted at rest)
 
 ## Image API: Generate
 Endpoint:
@@ -58,5 +58,5 @@ Notes:
 - Use a mainline model that supports the `image_generation` tool, and it will call a GPT Image model under the hood.
 
 ## Security
-- Do not store API keys in repo.
-- Use environment variables or local config files ignored by Git.
+- API keys wrapped in `<encrypted>` tags are encrypted at rest.
+- Replace `YOUR_OPENAI_API_KEY` placeholder with your actual key.

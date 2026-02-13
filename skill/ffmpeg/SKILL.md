@@ -5,10 +5,19 @@ description: Extract audio and transcode MP4 to WebM using ffmpeg.
 
 # ffmpeg
 
-## Scope
-Use this skill to:
+## Use when
 - Extract audio from a video file.
 - Transcode an MP4 video to WebM.
+
+## Don't use when
+- A higher-level video-editing skill or tool is already in use for complex edits.
+- The task is purely file transfer or metadata inspection (no transcoding needed).
+
+## Outputs
+- Output files should be written to `artifacts/` when possible (e.g., `artifacts/output.webm`).
+
+## Templates or Examples
+- Use the command blocks below as templates, swapping inputs/outputs and codecs as needed.
 
 ## Requirements
 - Prefer safe defaults and explicit codecs.

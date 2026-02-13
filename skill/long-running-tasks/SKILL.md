@@ -5,12 +5,21 @@ description: Handle tasks that may exceed tool timeouts (model training, large b
 
 # Long-Running Tasks
 
-## Scope
-
-Use this skill when:
+## Use when
 - Running tasks that may take more than 10 minutes (model quantization, training, large builds)
 - Starting processes that should continue even if the connection drops
 - Monitoring background jobs and reporting progress
+
+## Don't use when
+- The task completes quickly and fits within the normal tool timeout window.
+- The task must be interactive (requires continuous prompts or TTY input).
+
+## Outputs
+- Log files (e.g., `task.log`, `build.log`) should be saved in `artifacts/` when possible.
+- Final outputs should be written to `artifacts/` for easy retrieval.
+
+## Templates or Examples
+- Use the command patterns in the “Commands” and “Examples” sections as templates.
 
 ## Strategy
 

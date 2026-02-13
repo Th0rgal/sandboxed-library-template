@@ -94,5 +94,5 @@ Async response returns a task ID; poll `GET /tasks/{task_id}` for result URLs.
 - Data URI format: `data:{MIME_type};base64,{base64_data}`
 
 ## Security
-- Do not store API keys in repo.
-- Use environment variables or a local config file ignored by Git.
+- Never store API keys in code
+- Use `<encrypted>YOUR_DASHSCOPE_API_KEY</encrypted>` placeholder (encrypted at rest during skill sync)

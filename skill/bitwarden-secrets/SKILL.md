@@ -5,12 +5,12 @@ description: >
   Trigger terms: bitwarden, secrets, bws, secret, api key, credentials, password.
 ---
 
-## When to Use
+## Use when
 - Retrieving API keys, passwords, or credentials for a task
 - Listing available secrets or projects
 - Creating or updating secrets
 
-## When NOT to Use
+## Don't use when
 - Storing secrets in code or config files (use bws instead)
 - Managing Bitwarden vault items (use `bw` CLI, not `bws`)
 
@@ -30,13 +30,17 @@ description: >
 | Edit secret | `bws secret edit <SECRET_ID> --value <VALUE>` |
 | Delete secret | `bws secret delete <SECRET_ID>` |
 
-## Output Formats
+## Outputs
 Use `--output` flag: `json`, `yaml`, `table`, `tsv`, `env`
 
 ```bash
 bws secret get <ID> --output json
 bws secret list --output table
 ```
+
+## Templates or Examples
+- Use the `bws secret list --format json` output when a structured list is required.
+- Use the `bws secret get --format json` output when the user needs an exact payload.
 
 ## Procedure
 
