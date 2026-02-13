@@ -23,7 +23,7 @@ Close all unresolved review threads, keep checks green, and leave the PR in a cl
 - A PR shows unresolved review threads or conversations (Bugbot or other reviewers).
 - You need to verify reported issues and act on them.
 
-## Avoid when
+## Don't use when
 - The request is a general code review unrelated to existing review threads.
 - There is no open pull request to inspect.
 
@@ -59,7 +59,7 @@ If unclear, ask once then proceed.
    - If Bugbot is not running but unresolved threads remain, repeat steps 4-8.
    - If Bugbot is not running and no unresolved threads remain, you are done.
 
-# Outputs / Definition of Done
+# Outputs
 - All review threads are resolved in GitHub
 - Valid issues are fixed (with tests if needed)
 - Invalid issues have concise replies
@@ -71,6 +71,10 @@ If unclear, ask once then proceed.
 - Do not do unrelated refactors.
 - Keep replies factual and short.
 - Do not ask to continue the loop; continue until done unless inputs are missing.
+
+# Templates or Examples
+- Use the review comment template in `references/review-response-template.md` if present.
+- Prefer a short checklist for “fixes applied” and “fixes deferred”.
 
 # References
 - GitHub CLI: `gh pr view`, `gh pr checks`, `gh run list`

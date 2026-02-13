@@ -26,7 +26,7 @@ Produce the requested output with minimal quality loss and clear, reproducible c
 - Add subtitles, watermarks, or text overlays
 - Apply filters or change framerate/resolution
 
-## Avoid when
+## Don't use when
 - AI-based video generation (use media-creation instead)
 - ffmpeg/ffprobe are not installed
 
@@ -50,10 +50,14 @@ Produce the requested output with minimal quality loss and clear, reproducible c
 3. Run the command and verify duration, resolution, audio, and file size.
 4. Provide the final command and output path in the response.
 
-# Outputs / Definition of Done
+# Outputs
 - Output file exists at the requested path
 - Properties match the requested format and specs
 - Any transforms (trim, resize, subtitles) are confirmed
+
+# Templates or Examples
+- Provide final command(s) and expected output file paths under `artifacts/` when possible.
+- Use the “Quick Reference - Common Tasks” section as the default command template.
 
 # Guardrails
 - Never overwrite the input file.

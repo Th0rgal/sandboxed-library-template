@@ -1,25 +1,28 @@
 ---
 name: github-cli
-description: >
-  Interact with GitHub using the gh CLI - PRs, issues, repos, releases, and actions.
-  Trigger terms: github, gh, pull request, PR, issue, release, actions, workflow, repo.
+description: "Interact with GitHub using the gh CLI - PRs, issues, repos, releases, and actions. Trigger terms: github, gh, pull request, PR, issue, release, actions, workflow, repo."
 ---
 
-## When to Use
+## Use when
 - Creating, viewing, or merging pull requests
 - Managing issues (create, close, comment)
 - Checking workflow/action status
 - Creating releases
 - Cloning or forking repos
 
-## When NOT to Use
+## Don't use when
 - Local git operations (use `git` directly)
 - Non-GitHub remotes (GitLab, Bitbucket)
 
+## Outputs
+- PRs, issues, releases, or action logs in GitHub (no local files unless explicitly created).
+
+## Templates or Examples
+- Use the command tables below as templates.
+
 ## Prerequisites
 - `gh` CLI installed
-- SSH key `~/.ssh/agent` configured for GitHub access
-- Set `GIT_SSH_COMMAND` if needed: `export GIT_SSH_COMMAND="ssh -i ~/.ssh/agent"`
+- SSH key configured for GitHub access
 
 ## Quick Reference
 
@@ -99,6 +102,7 @@ mutation($threadId:ID!){
 2. Use `gh pr list` or `gh issue list` to find items
 3. Perform action with appropriate command
 4. Verify with `gh pr checks` or `gh run list`
+5. Always use a heredoc with --body-file or a specific encoding that supports \n correctly
 
 ## Checks & Guardrails
 - Always check PR status before merging
