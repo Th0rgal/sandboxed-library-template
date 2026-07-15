@@ -30,7 +30,8 @@ The boss agent may send you messages during execution. These appear as new user 
 
 If your prompt contains a `[task-board contract]` section, honor it strictly:
 work autonomously to the success condition, never end your turn to report
-progress, and end ONLY when (a) done + verified (finish with a short summary)
+progress, and end ONLY when (a) done + verified (finish with a line starting
+`DELIVERED:` followed by a short summary)
 or (b) stuck (finish with a line starting `BLOCKED:` + obstacle + what you
 tried + ONE question). The boss is notified automatically when your turn ends.
 
@@ -45,7 +46,8 @@ When your task is done:
 
 ## Oracle (deblocking)
 
-A persistent strong-model ORACLE is available via the `oracle` CLI (env vars are pre-set):
+When an `oracle` command is installed in the workspace, a persistent
+strong-model ORACLE can be used for deblocking:
 
     oracle "Goal: <literal Lean goal>. Tried: <last 2-3 tactic attempts + errors>. Question: <one specific question>"
 

@@ -78,11 +78,16 @@ with context, or re-plan).
 
 ## Backend Guide (match `backend` to `model_override`)
 
-- `opencode` + `builtin/smart` (MiniMax M3): long mechanical work, refactors,
-  verification sweeps, read-only research.
-- `codex` + `gpt-5.5`: code changes; `model_effort` "high" for hard proofs,
-  "low" for routine work.
-- `grok`: extra parallel redundancy on independent tasks.
+- `codex` + `gpt-5.6-terra`, effort `medium`: default software-engineering
+  writer and integration lane.
+- `codex` + `gpt-5.6-sol`, effort `high`: hard Lean proofs and benchmark
+  experiments where deeper reasoning justifies the extra latency.
+- `opencode` + `builtin/smart`: long mechanical work, refactors,
+  verification sweeps, and read-only research.
+- `grok` + `grok-4.5`: independent review or redundancy when a second model
+  family materially lowers risk.
+- Fable is reserved for mathematical hypothesis generation; never assign it
+  routine coding, PR integration, review, or merge work.
 - `genius` (frontier via proxy, best-effort): genuinely hard, well-scoped
   tasks; auto-degrades to codex/builtin if out of credits — never block on it.
 - `claudecode`: NEVER for workers (enforced server-side). Claude tokens are
@@ -114,12 +119,11 @@ over your memory.
   deblocks workers via the `oracle` CLI. It answers direction, never full
   proofs. Put the oracle instructions ONLY in long-running grinder prompts.
   A task generating 3+ oracle calls is mis-shaped — split it.
-- If Lean (or any heavy build) is the bottleneck: require `lean-slot`. Clean committed
-  `lake build` verification is then spread across the capacity-aware remote fleet;
-  dirty iterative builds remain bounded by the two local slots.
-  (max 2 local), group stuck lemmas by module, offload batch verification to
-  the dgx-spark workspace, and keep Lean-free tasks flowing meanwhile.
-  Generate wide, verify narrow.
+- If Lean is the bottleneck: require `lean-slot`. Clean committed `lake build`
+  verification is spread across the capacity-aware remote fleet; dirty
+  iterative builds remain bounded to two local slots. Group stuck lemmas by
+  module and keep Lean-free tasks flowing meanwhile. Generate wide, verify
+  narrow.
 
 ## Workspace inheritance
 
